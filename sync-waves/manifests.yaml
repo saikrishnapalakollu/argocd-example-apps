@@ -8,6 +8,9 @@ metadata:
     argocd.argoproj.io/sync-wave: "0"
 spec:
   template:
+    metadata:
+      annotations:
+        sidecar.istio.io/inject: "false"
     spec:
       containers:
         - name: upgrade-sql-schema
@@ -24,6 +27,9 @@ metadata:
     argocd.argoproj.io/sync-wave: "1"
 spec:
   template:
+    metadata:
+      annotations:
+        sidecar.istio.io/inject: "false"
     spec:
       containers:
         - name: upgrade-sql-schema
@@ -71,6 +77,9 @@ metadata:
     argocd.argoproj.io/sync-wave: "1"
 spec:
   template:
+    metadata:
+      annotations:
+        sidecar.istio.io/inject: "false"
     spec:
       containers:
         - name: page-up
@@ -123,6 +132,9 @@ metadata:
     argocd.argoproj.io/sync-wave: "3"
 spec:
   template:
+    metadata:
+      annotations:
+        sidecar.istio.io/inject: "false"
     spec:
       containers:
         - name: page-down
